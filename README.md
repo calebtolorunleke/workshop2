@@ -152,6 +152,3 @@ It identifies a method as a runnable unit test case for the JUnit test runner.
 
 What does assertEquals("John", this.john.getFirstName()) check?
 It asserts that calling getFirstName() on this.john returns the expected String "John". If it doesn't match, the test fails.
-
-If yearOfBirth is 1945, what will getAge() return in 2026? 81 7. Sketch a Class Diagram
-Plaintext
