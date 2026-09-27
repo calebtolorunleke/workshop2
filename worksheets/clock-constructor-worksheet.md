@@ -15,6 +15,7 @@ Your task: implement the constructor so that the validation tests pass.
 Write three `if` statements that throw `IllegalArgumentException` when a parameter is invalid.
 
 **Pattern:**
+
 ```java
 if (hour < 0 || hour > 23) {
     throw new IllegalArgumentException("Invalid hour: " + hour);
@@ -22,9 +23,10 @@ if (hour < 0 || hour > 23) {
 ```
 
 What are the valid ranges?
-- hour: ___ to ___
-- minute: ___ to ___
-- second: ___ to ___
+
+- hour: **_ to _**
+- minute: **_ to _**
+- second: **_ to _**
 
 ---
 
@@ -35,12 +37,13 @@ After validation passes, store the total seconds in the field.
 **Formula**: `secondsSinceMidnight = hour * ____ + minute * ____ + second`
 
 Fill in the blanks:
-- 1 hour = _______ seconds
-- 1 minute = _______ seconds
+
+- 1 hour = **\_\_\_** seconds
+- 1 minute = **\_\_\_** seconds
 
 Write the assignment statement:
 
-> `this.secondsSinceMidnight = ` _________________________________________________;
+> `this.secondsSinceMidnight = ` ************************\_************************;
 
 ---
 
@@ -58,7 +61,7 @@ Which tests should pass now?
 - [ ] `testInvalidSecondNegative`
 - [ ] `testInvalidSecondTooHigh`
 
-How many tests pass? ___ / 17 (7 should pass — boundary tests need Phase 4 getters)
+How many tests pass? \_17\_\_ / 17 (7 should pass — boundary tests need Phase 4 getters)
 
 ---
 
@@ -67,6 +70,7 @@ How many tests pass? ___ / 17 (7 should pass — boundary tests need Phase 4 get
 If your validation tests all pass, move to Phase 4. If not:
 
 **Common mistakes:**
+
 - Using `&&` instead of `||` in the condition (think: "hour < 0 OR hour > 23" means invalid)
 - Forgetting to use `this.` for the field assignment
 - Using `=` (assign) instead of `==` (compare) — Java won't compile this in an `if`
