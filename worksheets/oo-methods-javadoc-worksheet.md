@@ -10,30 +10,30 @@ Add getter methods to your Student class. Follow the Person.java pattern (`publi
 
 ```java
     /**
-     * Get the __________ of this student.
+     * Get the ___name_______ of this student.
      *
-     * @return __________________________________________
+     * @return _______"Caleb"________________________________
      */
-    public _________ get_________() {
-        return this.________________;
+    public ____String_____ get__StudentId_______() {
+        return this.____studentId____________;
     }
 
     /**
-     * Get the __________ of this student.
+     * Get the _____GPA_____ of this student.
      *
-     * @return __________________________________________
+     * @return ___________the student's gpa_______________________________
      */
-    public _________ get_________() {
-        return this.________________;
+    public ___double______ get__Gpa_______() {
+        return this.____gpa____________;
     }
 
     /**
-     * Get the __________ of this student.
+     * Get the ____height______ of this student.
      *
-     * @return __________________________________________
+     * @return ___________the student's height_______________________________
      */
-    public _________ get_________() {
-        return this.________________;
+    public ___double______ get_____height____() {
+        return this.______height__________;
     }
 ```
 
@@ -53,13 +53,15 @@ Write a `toString()` for your Student:
      */
     @Override
     public String toString() {
-        return ______________________________________________;
+        return ___this.name_+ " (ID: " + this.studentId + ", GPA: " + this.gpa + ")";_____;
     }
 ```
 
 What does `@Override` mean?
 
-> _______________________________________________________________________
+> ---
+>
+> The @Override annotation informs the Java compiler that this method is intentionally replacing (overriding) a method with the exact same signature inherited from a parent class—in this case, the toString() method defined in Java's root Object class. Using @Override helps catch spelling mistakes or incorrect parameter list signatures at compile time.
 
 ---
 
@@ -67,21 +69,21 @@ What does `@Override` mean?
 
 Swap your code with your partner. Check each item:
 
-| Check | Criterion | Pass? |
-|-------|-----------|-------|
-| [ ] | All fields are `private` | |
-| [ ] | Constructor is `public` | |
-| [ ] | All getter methods are `public` | |
-| [ ] | Every method has a Javadoc comment | |
-| [ ] | At least one `@param` tag is present | |
-| [ ] | At least one `@return` tag is present | |
-| [ ] | `this.` is used to access fields | |
-| [ ] | `toString()` returns a String (not void) | |
+| Check | Criterion                                | Pass? |
+| ----- | ---------------------------------------- | ----- |
+| [ ]   | All fields are `private`                 | Yes   |
+| [ ]   | Constructor is `public`                  | Yes   |
+| [ ]   | All getter methods are `public`          | Yes   |
+| [ ]   | Every method has a Javadoc comment       | Yes   |
+| [ ]   | At least one `@param` tag is present     | Yes   |
+| [ ]   | At least one `@return` tag is present    | Yes   |
+| [ ]   | `this.` is used to access fields         | Yes   |
+| [ ]   | `toString()` returns a String (not void) | Yes   |
 
 One thing your partner did well:
 
-> _______________________________________________________________________
+> -Clear, descriptive Javadoc comments that explain the purpose of each parameter and return value, along with clean input validation in the constructor.--
 
 One suggestion for improvement:
 
-> _______________________________________________________________________
+> -Add final modifiers to fields that should not change after construction (e.g., private final String studentId;) to reinforce immutability.--
