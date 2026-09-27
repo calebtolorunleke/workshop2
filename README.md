@@ -122,13 +122,3 @@ To enforce encapsulation and hide internal object state. This prevents external 
    How many parameters does the constructor take? 3 (firstName, lastName, yearOfBirth)
    What does this.firstName = firstName; do? (Why is this needed here?)
    It assigns the value of the parameter firstName to the instance variable firstName. The this keyword is required to resolve variable shadowing, distinguishing the object's instance variable from the incoming method parameter of the same name.
-
-4. Access Modifiers
-   Why is the constructor marked public?
-   So that outside classes (like PersonTest or a Main class) can create new instances of Person using the new keyword.
-
-Why are the getter methods marked public?
-To provide a controlled, public interface that allows external code to read the private field values.
-
-Could another class access john.firstName directly? Why or why not?
-No, because firstName is declared as private. Trying to access john.firstName directly outside the Person class will result in a compilation error.
