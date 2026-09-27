@@ -117,8 +117,3 @@ Here are the complete, precise answers to fill in your Phase 2 Worksheet based o
 3 int yearOfBirth
 Why are all fields marked private?
 To enforce encapsulation and hide internal object state. This prevents external classes from modifying the object's data directly without going through controlled public methods.
-
-3. Constructor
-   How many parameters does the constructor take? 3 (firstName, lastName, yearOfBirth)
-   What does this.firstName = firstName; do? (Why is this needed here?)
-   It assigns the value of the parameter firstName to the instance variable firstName. The this keyword is required to resolve variable shadowing, distinguishing the object's instance variable from the incoming method parameter of the same name.
