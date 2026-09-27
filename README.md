@@ -132,13 +132,3 @@ To provide a controlled, public interface that allows external code to read the 
 
 Could another class access john.firstName directly? Why or why not?
 No, because firstName is declared as private. Trying to access john.firstName directly outside the Person class will result in a compilation error.
-
-5. Javadoc
-   Find a @param tag. What does it document?
-   It documents an input parameter passed into a method or constructor, detailing its name and expected description.
-
-Find a @return tag. What does it document?
-It documents the output value and data description returned by a method.
-
-How is a Javadoc comment different from a regular // comment?
-Javadoc comments start with /\*\* and are automatically extracted by tooling (like VS Code or the javadoc CLI) to generate external HTML documentation and developer hover-tooltips. Regular // comments are brief single-line notes meant only for reading raw source code.
