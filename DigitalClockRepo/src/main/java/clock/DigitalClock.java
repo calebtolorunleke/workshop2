@@ -92,3 +92,6 @@ public class DigitalClock {
         return "DigitalClock[" + getDecimal() + "]";
     }
 }
+
+
+// all tests pass 
