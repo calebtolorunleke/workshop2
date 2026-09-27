@@ -21,10 +21,22 @@ public class DigitalClock {
      */
     public DigitalClock(int hour, int minute, int second) {
         // TODO: Phase 3 — Implement validation and field initialization
+
         // 1. Validate hour is in [0, 23], throw IllegalArgumentException if not
+
+        if (hour < 0 || hour > 23) {
+            throw new IllegalArgumentException("Hour must be between 0 and 23 inclusive.");
+        }
         // 2. Validate minute is in [0, 59], throw IllegalArgumentException if not
+          if (minute < 0 || minute > 59) {
+            throw new IllegalArgumentException("Minute must be between 0 and 59 inclusive.");
+        }
         // 3. Validate second is in [0, 59], throw IllegalArgumentException if not
+           if (second < 0 || second > 59) {
+            throw new IllegalArgumentException("Second must be between 0 and 59 inclusive.");
+        }
         // 4. Calculate and store secondsSinceMidnight from the three parameters
+        this.secondsSinceMidnight = (hour * 3600) + (minute * 60) + second;
     }
 
     /**
@@ -34,8 +46,7 @@ public class DigitalClock {
      */
     public int getHour() {
         // TODO: Phase 4 — return hour extracted from secondsSinceMidnight
-        return 0;
-    }
+            return this.secondsSinceMidnight / 3600;    }
 
     /**
      * Returns the minute component of this clock (0-59).
@@ -44,7 +55,7 @@ public class DigitalClock {
      */
     public int getMinute() {
         // TODO: Phase 4 — return minute extracted from secondsSinceMidnight
-        return 0;
+        return (this.secondsSinceMidnight / 60) % 60;
     }
 
     /**
@@ -54,8 +65,8 @@ public class DigitalClock {
      */
     public int getSecond() {
         // TODO: Phase 4 — return second extracted from secondsSinceMidnight
-        return 0;
-    }
+        return this.secondsSinceMidnight % 60;
+}
 
     /**
      * Returns the time in "HH:MM:SS" format (24-hour, zero-padded).
@@ -65,7 +76,7 @@ public class DigitalClock {
      */
     public String getDecimal() {
         // TODO: Phase 4 — use String.format with %02d for zero-padding
-        return "";
+        return String.format("%02d:%02d:%02d", getHour(), getMinute(), getSecond());
     }
 
     /**
@@ -78,6 +89,6 @@ public class DigitalClock {
     @Override
     public String toString() {
         // TODO: Phase 4 — return "DigitalClock[" + getDecimal() + "]"
-        return "";
+        return "DigitalClock[" + getDecimal() + "]";
     }
 }

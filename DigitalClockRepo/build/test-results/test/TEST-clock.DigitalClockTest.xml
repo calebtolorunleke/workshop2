@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="clock.DigitalClockTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2026-09-27T14:20:20" hostname="Calebs-MacBook-Pro.local" time="0.137">
+  <properties/>
+  <testcase name="testInvalidSecondNegative()" classname="clock.DigitalClockTest" time="0.048"/>
+  <testcase name="testBoundaryMidnight()" classname="clock.DigitalClockTest" time="0.005"/>
+  <testcase name="testInvalidSecondTooHigh()" classname="clock.DigitalClockTest" time="0.005"/>
+  <testcase name="testToString()" classname="clock.DigitalClockTest" time="0.013"/>
+  <testcase name="testGetDecimalSingleDigits()" classname="clock.DigitalClockTest" time="0.003"/>
+  <testcase name="testGetHour()" classname="clock.DigitalClockTest" time="0.002"/>
+  <testcase name="testInvalidHourTooHigh()" classname="clock.DigitalClockTest" time="0.003"/>
+  <testcase name="testGetDecimalEndOfDay()" classname="clock.DigitalClockTest" time="0.003"/>
+  <testcase name="testBoundaryMaxValid()" classname="clock.DigitalClockTest" time="0.002"/>
+  <testcase name="testInvalidMinuteNegative()" classname="clock.DigitalClockTest" time="0.002"/>
+  <testcase name="testGetDecimalMidnight()" classname="clock.DigitalClockTest" time="0.001"/>
+  <testcase name="testInvalidMinuteTooHigh()" classname="clock.DigitalClockTest" time="0.001"/>
+  <testcase name="testGetMinute()" classname="clock.DigitalClockTest" time="0.001"/>
+  <testcase name="testGetSecond()" classname="clock.DigitalClockTest" time="0.002"/>
+  <testcase name="testValidConstruction()" classname="clock.DigitalClockTest" time="0.003"/>
+  <testcase name="testInvalidHourNegative()" classname="clock.DigitalClockTest" time="0.002"/>
+  <testcase name="testGetDecimalAfternoon()" classname="clock.DigitalClockTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
