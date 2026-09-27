@@ -27,13 +27,13 @@ List the three fields. For each, write the type and the name:
 | --- | ---------- | --------------- |
 | 1   | **String** | **firstName**   |
 | 2   | **String** | **lastName**    |
-| 3   | **Int**    | **yearOfBirth** |
+| 3   | **int**    | **yearOfBirth** |
 
 Why are all fields marked `private`?
 
 > ---
 >
-> ## to prevent direct access to the field from things outside the class, and provide controlled access via getters
+> to prevent direct access to the field from things outside the class, and provide controlled access via getters
 
 ---
 
@@ -49,7 +49,9 @@ What does `this.firstName = firstName;` do? (Why is `this` needed here?)
 
 > ---
 
-> this is used to differentiate between the field and the parameter with the same name fron thr incoming method. This keyword is needed here because it refers to the public firstName that is being called in the class rather than the local firstName that is being called within the new method
+> this is used to differentiate between the field and the parameter with the same name fron the incoming method. this.firstName refers to the firstName field belonging to the current Person object, while firstName refers to the constructor parameter. this is needed to distinguish the field from the parameter because they have the same name.
+
+> This keyword is needed here because it refers to the private firstName that is being called in the class rather than the local firstName that is being called within the new method
 
 > ---
 
@@ -75,19 +77,19 @@ Find a `@param` tag. What does it document?
 
 > ---
 >
-> ## It documents an input parameter passsed into a method or constructor, detailing its name and expected description
+> It documents an input parameter passsed into a method or constructor, detailing its name and expected description
 
 Find a `@return` tag. What does it document?
 
 > ---
 >
-> ## It documents the output value and data description returned by a method
+> It documents the output value and data description returned by a method
 
 How is a Javadoc comment different from a regular `//` comment?
 
 > ---
 >
-> ## Javadoc comments start with /\*\* and are authomatically extracted by tooling (like Vs Code or the javadoc CLI) to generate external HTML documentation and meant only for reading raw source code.
+> Javadoc comments start with forward slash and two starts, and are authomatically extracted by tooling (like Vs Code or the javadoc CLI) to generate external HTML documentation and meant only for people reading the raw source code.
 
 ---
 
@@ -99,19 +101,19 @@ What does `@BeforeEach` do?
 
 > ---
 >
-> ## It excuses its setup method (e.g., re-instantiating john and sally) before every single @Test method runs to guarantee a fresh, isolated state.
+> It excuses its setup method (e.g., re-instantiating john and sally) before every single @Test method runs to guarantee a fresh, isolated state.
 
 What does `@Test` mark?
 
 > ---
 >
-> ## It identifies a method as a runnable unit test case for the JUnit test runner.
+> It identifies a method as a runnable unit test case for the JUnit test runner.
 
 What does `assertEquals("John", this.john.getFirstName())` check?
 
 > ---
 >
-> ## It asserts that calling getFirstName() on this.john returns the expected String "John". If it doesn't match, the test fails.
+> It asserts that calling getFirstName() on this.john returns the expected String "John". If it doesn't match, the test fails.
 
 If `yearOfBirth` is 1945, what will `getAge()` return in 2026?
 
