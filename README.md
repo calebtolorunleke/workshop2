@@ -155,17 +155,3 @@ It asserts that calling getFirstName() on this.john returns the expected String 
 
 If yearOfBirth is 1945, what will getAge() return in 2026? 81 7. Sketch a Class Diagram
 Plaintext
-┌──────────────────────────────────────┐
-│ Person │
-├──────────────────────────────────────┤
-│ - firstName: String │
-│ - lastName: String │
-│ - yearOfBirth: int │
-├──────────────────────────────────────┤
-│ + Person(firstName, lastName, yob) │
-│ + getFirstName(): String │
-│ + getLastName(): String │
-│ + getYearOfBirth(): int │
-│ + getAge(): int │
-│ + getFullName(): String │
-└──────────────────────────────────────┘
