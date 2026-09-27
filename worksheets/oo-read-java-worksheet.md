@@ -11,6 +11,7 @@ Read **Person.java** and **PersonTest.java** on the Phase 2 handout. Use a pen/p
 ## 1. Identify the Parts (annotate on the handout)
 
 On the Person.java code:
+
 - **Circle** all the fields (there are 3)
 - **Underline** the constructor
 - **Put a star** ★ next to each method
@@ -22,45 +23,49 @@ On the Person.java code:
 
 List the three fields. For each, write the type and the name:
 
-| # | Type | Name |
-|---|------|------|
-| 1 | ________________ | ________________ |
-| 2 | ________________ | ________________ |
-| 3 | ________________ | ________________ |
+| #   | Type       | Name            |
+| --- | ---------- | --------------- |
+| 1   | **String** | **firstName**   |
+| 2   | **String** | **lastName**    |
+| 3   | **Int**    | **yearOfBirth** |
 
 Why are all fields marked `private`?
 
-> _______________________________________________________________________
+> ---
 >
-> _______________________________________________________________________
+> ## to prevent direct access to the field from things outside the class, and provide controlled access via getters
 
 ---
 
 ## 3. Constructor
 
-How many parameters does the constructor take? ___________
+## How many parameters does the constructor take?
+
+> 3 (firstName, lastName, yearOfBirth)
+
+---
 
 What does `this.firstName = firstName;` do? (Why is `this` needed here?)
 
-> _______________________________________________________________________
->
-> _______________________________________________________________________
+> ---
 
----
+> this is used to differentiate between the field and the parameter with the same name fron thr incoming method. This keyword is needed here because it refers to the public firstName that is being called in the class rather than the local firstName that is being called within the new method
+
+> ---
 
 ## 4. Access Modifiers
 
 Why is the constructor marked `public`?
 
-> _______________________________________________________________________
+> -so that other classes can create instances of Person using the new keyword--
 
 Why are the getter methods marked `public`?
 
-> _______________________________________________________________________
+> -so other classes can access the values of the private fields in a controlled manner. To provide a controlled, public interface that allows external code to read the private field values--
 
 Could another class access `john.firstName` directly? Why or why not?
 
-> _______________________________________________________________________
+> -No, becuase firstName is a private field. Trying to access john.firstName directly outside the person class will result in a compilation error.--
 
 ---
 
@@ -68,15 +73,21 @@ Could another class access `john.firstName` directly? Why or why not?
 
 Find a `@param` tag. What does it document?
 
-> _______________________________________________________________________
+> ---
+>
+> ## It documents an input parameter passsed into a method or constructor, detailing its name and expected description
 
 Find a `@return` tag. What does it document?
 
-> _______________________________________________________________________
+> ---
+>
+> ## It documents the output value and data description returned by a method
 
 How is a Javadoc comment different from a regular `//` comment?
 
-> _______________________________________________________________________
+> ---
+>
+> ## Javadoc comments start with /\*\* and are authomatically extracted by tooling (like Vs Code or the javadoc CLI) to generate external HTML documentation and meant only for reading raw source code.
 
 ---
 
@@ -86,17 +97,27 @@ Look at PersonTest.java:
 
 What does `@BeforeEach` do?
 
-> _______________________________________________________________________
+> ---
+>
+> ## It excuses its setup method (e.g., re-instantiating john and sally) before every single @Test method runs to guarantee a fresh, isolated state.
 
 What does `@Test` mark?
 
-> _______________________________________________________________________
+> ---
+>
+> ## It identifies a method as a runnable unit test case for the JUnit test runner.
 
 What does `assertEquals("John", this.john.getFirstName())` check?
 
-> _______________________________________________________________________
+> ---
+>
+> ## It asserts that calling getFirstName() on this.john returns the expected String "John". If it doesn't match, the test fails.
 
-If `yearOfBirth` is 1945, what will `getAge()` return in 2026? ___________
+If `yearOfBirth` is 1945, what will `getAge()` return in 2026?
+
+> ---
+>
+> ## 81
 
 ---
 
@@ -105,18 +126,17 @@ If `yearOfBirth` is 1945, what will `getAge()` return in 2026? ___________
 In the box below, draw a UML class diagram for Person. Use `+` for public and `-` for private.
 
 ```
-┌─────────────────────────────┐
-│          Person             │
-├─────────────────────────────┤
-│                             │
-│                             │
-│                             │
-├─────────────────────────────┤
-│                             │
-│                             │
-│                             │
-│                             │
-│                             │
-│                             │
-└─────────────────────────────┘
+┌──────────────────────────────────────┐
+│ Person                               │
+├──────────────────────────────────────┤
+│ - firstName: String.                 │
+│ - lastName: String                   │
+│ - yearOfBirth: int                   │
+├──────────────────────────────────────┤
+│ + getFirstName(): String             │
+│ + getLastName(): String              │
+│ + getYearOfBirth(): int              │
+│ + getAge(): int                      │
+│ + getFullName(): String              │
+└──────────────────────────────────────┘
 ```

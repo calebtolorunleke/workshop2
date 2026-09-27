@@ -90,9 +90,9 @@ name = john.getFullName()
 
 ## The Key Difference
 
-| | Design 1 (Function-Centric) | Design 2 (Object-Oriented) |
-|---|---|---|
-| **How we get age** | `getAge(john)` | `john.getAge()` |
-| **Reads as** | "Function getAge, take this data and return ITS age" | "Object john, get YOUR age" |
-| **Data lives** | In a dictionary (separate from functions) | Inside the object (together with functions) |
-| **Functions live** | Standalone, separate from data | Inside the class, bundled with data |
+|                    | Design 1 (Function-Centric)                          | Design 2 (Object-Oriented)                  |
+| ------------------ | ---------------------------------------------------- | ------------------------------------------- |
+| **How we get age** | `getAge(john)`                                       | `john.getAge()`                             |
+| **Reads as**       | "Function getAge, take this data and return ITS age" | "Object john, get YOUR age"                 |
+| **Data lives**     | In a dictionary (separate from functions)            | Inside the object (together with functions) |
+| **Functions live** | Standalone, separate from data                       | Inside the class, bundled with data         |
